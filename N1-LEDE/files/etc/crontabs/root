@@ -1,2 +1,3 @@
 0 4 * * * fstrim -a
+#0 4 * * * /etc/coremark.sh
 16 */6 * * * /usr/bin/cloudflarespeedtest/cloudflarespeedtest.sh start
