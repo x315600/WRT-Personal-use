@@ -25,6 +25,7 @@ function git_sparse_clone() {
 # git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 # git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
+git clone --depth=1 https://github.com/gdy666/luci-app-lucky package/lucky
 git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
 
@@ -91,6 +92,7 @@ rm -rf feeds/packages/net/msd_lite
 # rm -rf feeds/packages/net/qBittorrent-static
 # rm -rf feeds/luci/applications/luci-app-qbittorrent
 rm -rf feeds/luci/applications/luci-app-serverchan
+rm -rf feeds/packages/net/lucky
 
 # 1 启用 frps
 rm -rf feeds/packages/net/frp
