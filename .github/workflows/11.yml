@@ -49,9 +49,4 @@ jobs:
       run: |
         echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
        
-    - name: Upload OpenWrt Firmware to Release
-      uses: ncipollo/release-action@main
-      with:
-        name: OpenWrt-LEAN for N1[精简] → Release: ${{ env.RELEASE_DATE }}
-        
-          
+    
