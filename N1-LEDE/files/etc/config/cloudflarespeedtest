@@ -6,7 +6,7 @@ config global 'global'
 	option speed '100'
 	option enabled '1'
 	option custome_cors_enabled '1'
-	option custome_cron '0 */2 * * *'
+	option custome_cron '16 */6 * * *'
 	option proxy_mode 'gfw'
 
 config servers 'servers'
