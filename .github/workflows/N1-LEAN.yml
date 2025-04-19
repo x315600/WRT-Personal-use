@@ -1,4 +1,4 @@
-name: Build OpenWRT-LEAN for N1
+name: LEAN - N1固件编译[多插件]
 
 on:
   workflow_dispatch:
