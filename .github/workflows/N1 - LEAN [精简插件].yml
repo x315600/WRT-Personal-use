@@ -23,7 +23,7 @@ jobs:
         TIME="$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
         echo "TIME=$TIME" >> $GITHUB_ENV
         echo "=============================================================================="
-        echo $env.TIME
+        echo ${{ env.TIME }}
         echo "=============================================================================="
 
     - name: Check machine configuration
