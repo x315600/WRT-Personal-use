@@ -172,12 +172,13 @@ jobs:
       uses: ncipollo/release-action@main
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
-        name: OpenWrt-LEAN for N1[自用] → ${{ env.DATE }}
+        name: OpenWrt-LEAN for N1[自用] → $(date +"%Y年%m月%d日%H时%M分")
         tag: N1_LEAN_MORE_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
+          编译时间: $(date +"%Y年%m月%d日%H时%M分")
           IP: 192.168.6.100
           账户: root
           密码: password
