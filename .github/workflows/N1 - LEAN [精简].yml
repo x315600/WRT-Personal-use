@@ -1,4 +1,4 @@
-name: LEAN - N1固件编译[精简插件]
+name: LEAN - N1固件编译[精简]
 
 on:
   workflow_dispatch:
