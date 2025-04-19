@@ -13,8 +13,8 @@ config dnsmasq
 	option nonwildcard '1'
 	option localservice '1'
 	option ednspacket_max '1232'
-	option noresolv '1'
 	option cachesize '0'
+	option noresolv '1'
 
 config dhcp 'lan'
 	option interface 'lan'
