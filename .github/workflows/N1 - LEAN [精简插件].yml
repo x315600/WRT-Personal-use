@@ -173,7 +173,7 @@ jobs:
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
         name: OpenWrt-LEAN for N1 [精简] → Release date:${{ env.DATE }}
-        tag: N1_LEAN_MIN
+        tag: N1_LEAN_MIN_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
