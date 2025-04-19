@@ -18,14 +18,6 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-    - name: Set Time - Beijing
-      run: |
-        TIME="$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
-        echo "TIME=$TIME" >> $GITHUB_ENV
-        echo "=============================================================================="
-        echo ${{ env.TIME }}
-        echo "=============================================================================="
-
     - name: Check machine configuration
       run: |
         echo "警告⚠"
@@ -180,15 +172,19 @@ jobs:
       uses: ncipollo/release-action@main
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
-        tag: OpenWrt_N1_${{ env.TIME }}
+        name: OpenWrt-LEAN for N1 精简版 → Release date:${{ env.DATE }}
+        tag: N1_LEAN_MIN
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          N1 OpenWrt-LEAN 自用精简插件 - ${{ env.TIME }}
           IP: 192.168.6.100
           账户: root
           密码: password
+          * **使用方法：**
+          1. 安装固件：写入U盘直接使用；U盘启动后可输入命令 `openwrt-install-amlogic` 按照英文提示写入到emmc
+          2. 更新固件：将固件放在 `/mnt/mmcblk2p4/` 目录下，输入命令 `openwrt-update-amlogic` 可直接更新
+          3. 登录Luci界面后，可直接使用`晶晨宝盒`插件进行写入emmc或者更新操作（使用前先按需求填写好插件设置），免去手动输入命令
           
     - name: Delete old releases
       uses: dev-drprasad/delete-older-releases@master
