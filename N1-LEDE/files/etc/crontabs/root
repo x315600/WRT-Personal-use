@@ -1,1 +1,2 @@
 0 4 * * * fstrim -a
+16 */6 * * * /usr/bin/cloudflarespeedtest/cloudflarespeedtest.sh start
