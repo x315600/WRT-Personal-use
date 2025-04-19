@@ -53,6 +53,7 @@ mv package/small/luci-app-poweroff package/luci-app-poweroff
 # mv package/small/wrtbwmon package/wrtbwmon
 # mv package/small/luci-app-wrtbwmon package/luci-app-wrtbwmon
 rm -rf package/small
+
 #添加科学上网源
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
@@ -66,7 +67,6 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 
 git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone -b lua --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
-#git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # Remove packages
 #删除lean库中的插件，使用自定义源中的包。
@@ -78,8 +78,8 @@ rm -rf feeds/packages/utils/v2dat
 rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/themes/luci-theme-design
 #rm -rf feeds/luci/applications/luci-app-design-config
-# 自定义
 
+# 自定义
 rm -rf feeds/packages/net/ddns-go
 # rm -rf feeds/packages/net/frp
 # rm -rf feeds/luci/applications/luci-app-frps
@@ -91,8 +91,10 @@ rm -rf feeds/packages/net/msd_lite
 # rm -rf feeds/packages/net/qBittorrent
 # rm -rf feeds/packages/net/qBittorrent-static
 # rm -rf feeds/luci/applications/luci-app-qbittorrent
+# rm -rf feeds/packages/net/alist
 rm -rf feeds/luci/applications/luci-app-serverchan
 rm -rf feeds/packages/net/lucky
+
 
 # 1 启用 frps
 rm -rf feeds/packages/net/frp
