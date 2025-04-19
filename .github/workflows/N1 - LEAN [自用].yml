@@ -1,4 +1,4 @@
-name: LEAN - N1固件编译[多插件]
+name: LEAN - N1固件编译[自用]
 
 on:
   workflow_dispatch:
@@ -172,7 +172,7 @@ jobs:
       uses: ncipollo/release-action@main
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
-        name: OpenWrt-LEAN for N1 → Release date:${{ env.DATE }}
+        name: OpenWrt-LEAN for N1 自用 → Release date:${{ env.DATE }}
         tag: N1_LEAN_MORE
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
