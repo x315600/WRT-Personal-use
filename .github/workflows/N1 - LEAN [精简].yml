@@ -3,7 +3,7 @@ name: LEAN - N1固件编译[精简]
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 16 * * 5"
+    - cron: "0 16 * * sun"
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
