@@ -167,18 +167,22 @@ jobs:
         SFE_FLOW: 0
         ENABLE_WIFI_K504: 0
         ENABLE_WIFI_K510: 0
+
+    - name: set release date
+      run: |
+        echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
        
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@main
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
-        name: OpenWrt-LEAN for N1[精简] → $(date +"%Y年%m月%d日%H时%M分")
+        name: OpenWrt-LEAN for N1[精简] → Release: ${{ env.RELEASE_DATE }}
         tag: N1_LEAN_MIN_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          编译时间: $(date +"%Y年%m月%d日%H时%M分")
+          编译时间: ${{ env.RELEASE_DATE }}
           IP: 192.168.6.100
           账户: root
           密码: password
