@@ -52,6 +52,7 @@ jobs:
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@main
       with:
+        name: OpenWrt-LEAN for N1[自用] - ${{ env.RELEASE_DATE }}
         body: |
           编译时间: ${{ env.RELEASE_DATE }}
           IP: 192.168.6.100
