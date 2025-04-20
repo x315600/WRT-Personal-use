@@ -168,7 +168,7 @@ jobs:
         ENABLE_WIFI_K504: 0
         ENABLE_WIFI_K510: 0
 
-    - name: set release date
+    - name: Set Release Date
       run: |
         echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
        
