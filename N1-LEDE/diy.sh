@@ -115,7 +115,7 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 
 # 修改主机名
 #sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate
-sed -i 's/LEDE/N1/g' package/base-files/luci2/bin/config_generate
+#sed -i 's/LEDE/N1/g' package/base-files/luci2/bin/config_generate
 
 # Modify default IP   第一行19.07的路径   第二行23.05的路径
 #sed -i 's/192.168.1.1/192.168.123.2/g' package/base-files/files/bin/config_generate
@@ -126,7 +126,7 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
 
 # 修改主题为默认
-sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' ./feeds/luci/collections/luci/Makefile
+#sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' ./feeds/luci/collections/luci/Makefile
 
 #修改默认时间格式
 sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S %A")/g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
