@@ -169,7 +169,8 @@ jobs:
         ENABLE_WIFI_K510: 0
 
     - name: Set Release Date
-      run: echo "::set-env name=RELEASE_DATE::$(date +"%Y/%m/%d - %H:%M:%S")"
+      run: |
+        echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
        
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@main
