@@ -130,7 +130,7 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 修改主题为默认
-#sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' ./feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' ./feeds/luci/collections/luci/Makefile
 
 #修改默认时间格式
 sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S %A")/g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
