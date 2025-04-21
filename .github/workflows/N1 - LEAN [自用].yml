@@ -162,6 +162,8 @@ jobs:
         #SFE_FLOW: 0
         KERNEL_VERSION_NAME: 5.15.176_6.6.80
         PACKAGE_SOC: s905d
+        WHOAMI: dk134dk
+        OPENWRT_VER: $(date +"%Y.%m.%d")
         SW_FLOWOFFLOAD: 0
         HW_FLOWOFFLOAD: 0
         SFE_FLOW: 0
