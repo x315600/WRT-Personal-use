@@ -63,9 +63,6 @@ git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 #git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
-
-
-git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone -b lua --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
 
 # Remove packages
@@ -124,6 +121,13 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 # golang版本修复
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
+
+# mosdns
+#git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
+find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+find ./ | grep Makefile | grep mosdns | xargs rm -f
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # 修改主题为默认
 #sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' ./feeds/luci/collections/luci/Makefile
