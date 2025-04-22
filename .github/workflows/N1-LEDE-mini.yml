@@ -166,7 +166,7 @@ jobs:
         KERNEL_VERSION_NAME: 5.15.176_6.6.80
         PACKAGE_SOC: s905d
         WHOAMI: Lein
-        OPENWRT_VER: $(date +"%Y.%m.%d[%H:%M:%S]")
+        OPENWRT_VER: $(date +"%Y.%m.%d")
         SW_FLOWOFFLOAD: 0
         HW_FLOWOFFLOAD: 0
         SFE_FLOW: 0
@@ -178,7 +178,8 @@ jobs:
         # echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
     - name: Tar Packages
       run: |
-        tar -zcvf packages.tar.gz /opt/packages
+        cd /opt/packages
+        tar -zcvf Packages.tar.gz aarch64_cortex-a53
         mv packages.tar.gz /opt/openwrt_packit/output
         rm -rf /opt/packages
        
