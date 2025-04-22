@@ -8,7 +8,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: N1-LEDE/test.config
+  CONFIG_FILE: N1-LEDE/23.05.config-mini
   DIY_SH: N1-LEDE/diy-23.05.sh
   FILES: N1-LEDE/files
   TZ: Asia/Shanghai
