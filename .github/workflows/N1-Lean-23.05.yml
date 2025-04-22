@@ -1,4 +1,4 @@
-name: N1-LuCI-23.05
+name: N1-Lean-23.05
 
 on:
   workflow_dispatch:
