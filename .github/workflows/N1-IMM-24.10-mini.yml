@@ -170,7 +170,7 @@ jobs:
       uses: ncipollo/release-action@main
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
-        name: OpenWrt-IMM for N1[精简] - ${{ env.RELEASE_DATE }}
+        name: OpenWrt-IMM for N1[mini] - ${{ env.RELEASE_DATE }}
         tag: IMM_N1_mini_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
