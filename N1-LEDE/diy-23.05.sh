@@ -152,8 +152,8 @@ rm -rf feeds/packages/net/ddns-go
 rm -rf feeds/luci/applications/luci-app-ddns-go
 git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 
-# NetSpeedTest
-git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
+# NetSpeedTest编译报错
+# git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
 # alist
 rm -rf feeds/packages/net/alist
@@ -179,17 +179,17 @@ git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
 
 
 # Set DISTRIB_REVISION
-sed -i "s/R25.4.145 /Lein Build $(TZ=UTC-8 date "+%Y.%m.%d") For N1 /g" package/lean/default-settings/files/zzz-default-settings
+#sed -i "s/R25.4.145 /Lein Build $(TZ=UTC-8 date "+%Y.%m.%d") For N1 /g" package/lean/default-settings/files/zzz-default-settings
 sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-mount/root/etc/init.d/cifs
 sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba4/files/smb.conf.template
 
 # 修改主机名
 #sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate
-sed -i 's/LEDE/N11/g' package/base-files/luci2/bin/config_generate
+#sed -i 's/LEDE/OpenWrt/g' package/base-files/luci2/bin/config_generate
 
 # Modify default IP   第一行19.07的路径   第二行23.05的路径
 #sed -i 's/192.168.1.1/192.168.6.50/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.6.101/g' package/base-files/luci2/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.6.101/g' package/base-files/luci2/bin/config_generate
 
 # 修改主题为默认
 #sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' ./feeds/luci/collections/luci/Makefile
