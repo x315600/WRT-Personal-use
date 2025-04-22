@@ -179,8 +179,8 @@ jobs:
     - name: Tar Packages
       run: |
         cd /opt/packages
-        tar -zcvf Packages.tar.gz aarch64_cortex-a53
-        mv packages.tar.gz /opt/openwrt_packit/output
+        tar -zcvf IPKs.tar.gz aarch64_cortex-a53
+        mv IPKs.tar.gz /opt/openwrt_packit/output
         rm -rf /opt/packages
        
     - name: Upload OpenWrt Firmware to Release
