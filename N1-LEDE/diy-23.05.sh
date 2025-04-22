@@ -85,10 +85,10 @@ mv package/small/luci-app-dockerman package/luci-app-dockerman
 rm -rf feeds/luci/applications/luci-app-serverchan
 mv package/small/luci-app-wechatpush package/luci-app-wechatpush
 
-# design主题
-rm -rf feeds/luci/themes/luci-theme-design
-mv package/small/luci-theme-design package/luci-theme-design
-mv package/small/luci-app-design-config package/luci-app-design-config
+# design主题,编译主题错误
+# rm -rf feeds/luci/themes/luci-theme-design
+# mv package/small/luci-theme-design package/luci-theme-design
+# mv package/small/luci-app-design-config package/luci-app-design-config
 
 # haproxy
 # 添加lua5.4依赖
