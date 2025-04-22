@@ -127,7 +127,7 @@ rm -rf feeds/luci/applications/luci-app-ddns-go
 git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 
 # NetSpeedTest
-git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
+#git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
 # alist
 rm -rf feeds/packages/net/alist
