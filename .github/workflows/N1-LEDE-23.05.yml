@@ -106,6 +106,7 @@ jobs:
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
+        echo "RELEASE_TIME=$(date +"%Y年%m月%d日 | %H时%M分%S秒")" >> ${GITHUB_ENV}
 
     - name: cache wrt build
       uses: stupidloud/cachewrtbuild@main
@@ -186,7 +187,7 @@ jobs:
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          编译打包时间: $(date +"%Y年%m月%d日 | %H时%M分%S秒")
+          编译打包时间: ${{ env.RELEASE_TIME }}
           IP: 192.168.6.100
           账户: root
           密码: password
