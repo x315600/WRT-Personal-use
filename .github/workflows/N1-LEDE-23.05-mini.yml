@@ -173,7 +173,8 @@ jobs:
 
     - name: Tar Packages
       run: |
-        tar -zcvf packages.tar.gz /opt/packages
+        cd /opt/packages
+        tar -zcvf Packages.tar.gz aarch64_cortex-a53
         mv packages.tar.gz /opt/openwrt_packit/output
         rm -rf /opt/packages
        
