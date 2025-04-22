@@ -1,4 +1,4 @@
-name: N1-LuCI-23.05固件编译[自用]
+name: N1-LuCI-23.05
 
 on:
   workflow_dispatch:
