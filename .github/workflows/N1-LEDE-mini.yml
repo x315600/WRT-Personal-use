@@ -107,8 +107,6 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         sed -i 's|https://github.com/coolsnowwolf/luci.git;openwrt-23.05|https://github.com/coolsnowwolf/luci|g' feeds.conf.default
-        echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
-        echo "RELEASE_TIME=$(date +"%Y年%m月%d日 | %H时%M分%S秒")" >> ${GITHUB_ENV}
 
     - name: cache wrt build
       uses: stupidloud/cachewrtbuild@main
@@ -173,15 +171,14 @@ jobs:
         ENABLE_WIFI_K504: 0
         ENABLE_WIFI_K510: 0
 
-    # - name: Set Release Date
-      # run: |
-        # echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
     - name: Tar Packages
       run: |
         cd /opt/packages
         tar -zcvf IPKs.tar.gz *
         mv IPKs.tar.gz /opt/openwrt_packit/output
         rm -rf /opt/packages
+        echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
+        echo "RELEASE_TIME=$(date +"%Y年%m月%d日 | %H时%M分%S秒")" >> ${GITHUB_ENV}
        
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@main
