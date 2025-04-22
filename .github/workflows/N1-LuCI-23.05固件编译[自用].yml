@@ -147,9 +147,11 @@ jobs:
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "compile_status=success" >> $GITHUB_ENV
+        mkdir -p /opt/openwrt_packit/output
+        tar -zcvf /opt/openwrt_packit/output/IPKs.tar.gz bin/packages
 
     - name: Package OpenWrt Firmware
-      if: ${{ env.compile_status }} == 'success' && !cancelled()
+      if: ${{ env.compile_status }} == 'success' && !cancelled() 
       uses: unifreq/openwrt_packit@master
       env:
         OPENWRT_ARMVIRT: openwrt/bin/targets/*/*/openwrt-amlogic-mesongx-phicomm_n1-rootfs.tar.gz
