@@ -176,7 +176,7 @@ jobs:
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
         name: OpenWrt-LEDE for N1 - ${{ env.RELEASE_DATE }}
-        tag: N1_LEAN_MORE_${{ env.PACKAGED_OUTPUTDATE }}
+        tag: LEDE_N1_23.05_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
