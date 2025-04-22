@@ -1,4 +1,4 @@
-name: N1-Lean-mini
+name: N1-LEDE-mini
 
 on:
   workflow_dispatch:
@@ -181,7 +181,7 @@ jobs:
       uses: ncipollo/release-action@main
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
-        name: OpenWrt-LEAN for N1[精简] - ${{ env.RELEASE_DATE }}
+        name: OpenWrt-LEDE for N1[mini] - ${{ env.RELEASE_DATE }}
         tag: N1_LEAN_MIN_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
