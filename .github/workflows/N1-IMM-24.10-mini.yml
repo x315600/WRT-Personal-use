@@ -1,4 +1,4 @@
-name: N1-IMM-24.10[精简]
+name: N1-IMM-24.10-mini
 
 on:
   workflow_dispatch:
