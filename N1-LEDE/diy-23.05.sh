@@ -105,8 +105,9 @@ mv package/small/aria2 feeds/packages/net/aria2
 
 # netdata
 rm -rf feeds/packages/admin/netdata
-git clone --depth=1 https://github.com/sirpdboy/openwrt-netdata feeds/packages/admin/netdata
+# git clone --depth=1 https://github.com/sirpdboy/openwrt-netdata feeds/packages/admin/netdata
 rm -rf feeds/luci/applications/luci-app-netdata
+mv package/small/netdata feeds/packages/admin/netdata
 mv package/small/luci-app-netdata feeds/luci/applications/luci-app-netdata
 
 # wrtbwmon
