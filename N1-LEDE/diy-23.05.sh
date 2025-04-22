@@ -68,6 +68,7 @@ git clone --depth=1 https://github.com/kenzok8/small-package package/small
 # timecontrol
 rm -rf feeds/luci/applications/luci-app-timecontrol
 mv package/small/luci-app-timecontrol package/luci-app-timecontrol
+sed -i 's/control/system/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 
 # openclash
 rm -rf feeds/luci/applications/luci-app-openclash
@@ -102,6 +103,8 @@ mv package/small/haproxy feeds/packages/net/haproxy
 # aria2
 rm -rf feeds/packages/net/aria2
 mv package/small/aria2 feeds/packages/net/aria2
+# 调整到网络存储菜单
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-aria2/luasrc/controller/*.lua
 
 # netdata
 rm -rf feeds/packages/admin/netdata
@@ -194,6 +197,9 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 
 # 修改主题为默认
 #sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' ./feeds/luci/collections/luci/Makefile
+
+# TTYD调整到系统菜单
+sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/*.json
 
 #修改默认时间格式
 sed -i 's|os.date()|os.date("%Y/%m/%d %H:%M:%S %A")|g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
