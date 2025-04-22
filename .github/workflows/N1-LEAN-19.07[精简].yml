@@ -1,4 +1,4 @@
-name: LEAN - N1固件编译[精简]
+name: N1-LEAN-19.07[精简]
 
 on:
   workflow_dispatch:
