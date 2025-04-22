@@ -166,7 +166,7 @@ jobs:
         KERNEL_VERSION_NAME: 5.15.176_6.6.80
         PACKAGE_SOC: s905d
         WHOAMI: Lein
-        OPENWRT_VER: $(date +"%Y.%m.%d")
+        OPENWRT_VER: $(date +"%Y.%m.%d[%H:%M:%S]")
         SW_FLOWOFFLOAD: 0
         HW_FLOWOFFLOAD: 0
         SFE_FLOW: 0
@@ -187,7 +187,7 @@ jobs:
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          编译时间: $(date +"%Y年%m月%d日 | %H时%M分%S秒")
+          编译打包时间: $(date +"%Y年%m月%d日 | %H时%M分%S秒")
           IP: 192.168.6.100
           账户: root
           密码: password
