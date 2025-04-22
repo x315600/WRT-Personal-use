@@ -1,0 +1,19 @@
+
+config global 'global'
+	option ipv6_enabled '0'
+	option advanced '0'
+	option custome_url 'https://speed.cloudflare.com/__down?bytes=300000000'
+	option speed '100'
+	option enabled '1'
+	option custome_cors_enabled '1'
+	option custome_cron '16 */6 * * *'
+	option proxy_mode 'gfw'
+
+config servers 'servers'
+	option ssr_enabled '0'
+	option passwall2_enabled '0'
+	option bypass_enabled '0'
+	option vssr_enabled '0'
+	option MosDNS_enabled '1'
+	option openclash_restart '1'
+
