@@ -103,6 +103,7 @@ mv package/small/luci-app-cloudflarespeedtest package/luci-app-cloudflarespeedte
 mv package/small/luci-app-dnsfilter package/luci-app-dnsfilter
 
 # KMS
+rm -rf feeds/packages/net/vlmcsd
 mv package/small/vlmcsd package/vlmcsd
 
 mv package/small/luci-app-wolplus package/luci-app-wolplus
