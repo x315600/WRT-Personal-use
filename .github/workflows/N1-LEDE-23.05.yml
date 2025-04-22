@@ -171,7 +171,7 @@ jobs:
         ENABLE_WIFI_K504: 0
         ENABLE_WIFI_K510: 0 
 
-    - name: tar packages
+    - name: Tar Packages
       run: |
         tar -zcvf packages.tar.gz /opt/packages
         mv packages.tar.gz /opt/openwrt_packit/output
