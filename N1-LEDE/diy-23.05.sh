@@ -95,6 +95,7 @@ git clone --depth=1 https://github.com/immortalwrt/packages package/imm
 rm -rf feeds/packages/net/haproxy
 mv package/imm/lang/lua5.4 feeds/packages/lang/lua5.4
 mv package/small/haproxy feeds/packages/net/haproxy
+rm -rf package/imm
 
 # aria2
 rm -rf feeds/packages/net/aria2
