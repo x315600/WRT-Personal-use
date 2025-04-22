@@ -179,7 +179,7 @@ jobs:
     - name: Tar Packages
       run: |
         cd /opt/packages
-        tar -zcvf IPKs.tar.gz aarch64_cortex-a53
+        tar -zcvf IPKs.tar.gz *
         mv IPKs.tar.gz /opt/openwrt_packit/output
         rm -rf /opt/packages
        
