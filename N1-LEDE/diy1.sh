@@ -188,4 +188,4 @@ sed -i 's/192.168.1.1/192.168.6.101/g' package/base-files/luci2/bin/config_gener
 #sed -i 's/luci-theme-argon/luci-theme-bootstrap/g' ./feeds/luci/collections/luci/Makefile
 
 #修改默认时间格式
-sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S %A")/g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
+sed -i 's/os.date()/os.date("%Y/%m/%d %H:%M:%S %A")/g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
