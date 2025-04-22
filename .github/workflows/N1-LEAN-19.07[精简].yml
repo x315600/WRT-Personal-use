@@ -1,4 +1,4 @@
-name: N1-LEAN-19.07[精简]
+name: N1-LEAN-mini
 
 on:
   workflow_dispatch:
