@@ -90,7 +90,10 @@ mv package/small/luci-theme-design package/luci-theme-design
 mv package/small/luci-app-design-config package/luci-app-design-config
 
 # haproxy
+# 添加lua5.4依赖
+git clone --depth=1 https://github.com/immortalwrt/packages package/imm
 rm -rf feeds/packages/net/haproxy
+mv package/imm/lang/lua5.4 feeds/packages/lang/lua5.4
 mv package/small/haproxy feeds/packages/net/haproxy
 
 # aria2
