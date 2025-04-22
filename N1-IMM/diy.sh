@@ -102,6 +102,9 @@ mv package/small/luci-app-cloudflarespeedtest package/luci-app-cloudflarespeedte
 # dnsfilter
 mv package/small/luci-app-dnsfilter package/luci-app-dnsfilter
 
+# KMS
+mv package/small/vlmcsd package/vlmcsd
+
 mv package/small/luci-app-wolplus package/luci-app-wolplus
 mv package/small/luci-app-poweroff package/luci-app-poweroff
 mv package/small/luci-app-socat package/luci-app-socat
