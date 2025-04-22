@@ -105,8 +105,6 @@ jobs:
       working-directory: ./
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
-        echo "RELEASE_TIME=$(date +"%Y年%m月%d日 | %H时%M分%S秒")" >> ${GITHUB_ENV}
 
     - name: cache wrt build
       uses: stupidloud/cachewrtbuild@main
@@ -177,6 +175,8 @@ jobs:
         tar -zcvf IPKs.tar.gz *
         mv IPKs.tar.gz /opt/openwrt_packit/output
         rm -rf /opt/packages
+        echo "RELEASE_DATE=$(date +"%Y/%m/%d - %H:%M:%S")" >> ${GITHUB_ENV}
+        echo "RELEASE_TIME=$(date +"%Y年%m月%d日 | %H时%M分%S秒")" >> ${GITHUB_ENV}
        
     - name: Upload OpenWrt Firmware to Release
       uses: ncipollo/release-action@main
