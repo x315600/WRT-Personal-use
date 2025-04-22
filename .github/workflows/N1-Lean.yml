@@ -1,4 +1,4 @@
-name: N1-LEAN
+name: N1-Lean
 
 on:
   workflow_dispatch:
