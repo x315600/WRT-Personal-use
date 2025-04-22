@@ -25,6 +25,7 @@ function git_sparse_clone() {
 # rm -rf feeds/luci/applications/luci-app-wrtbwmon
 # git clone --depth 1 https://github.com/brvphoenix/wrtbwmon package/wrtbwmon
 # git clone --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
+
 # lucky
 rm -rf feeds/packages/net/lucky
 rm -rf feeds/luci/applications/luci-app-lucky
@@ -91,11 +92,11 @@ mv package/small/luci-app-design-config package/luci-app-design-config
 
 # haproxy
 # 添加lua5.4依赖
-git clone --depth=1 https://github.com/immortalwrt/packages package/imm
-rm -rf feeds/packages/net/haproxy
-mv package/imm/lang/lua5.4 feeds/packages/lang/lua5.4
-mv package/small/haproxy feeds/packages/net/haproxy
-rm -rf package/imm
+# git clone --depth=1 https://github.com/immortalwrt/packages package/imm
+# mv package/imm/lang/lua5.4 feeds/packages/lang/lua5.4
+# rm -rf package/imm
+# rm -rf feeds/packages/net/haproxy
+# mv package/small/haproxy feeds/packages/net/haproxy
 
 # aria2
 rm -rf feeds/packages/net/aria2
@@ -193,3 +194,4 @@ sed -i 's/192.168.1.1/192.168.6.101/g' package/base-files/luci2/bin/config_gener
 
 #修改默认时间格式
 sed -i 's|os.date()|os.date("%Y/%m/%d %H:%M:%S %A")|g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
+# sed -i 's|os.date()|os.date("%Y年%m月%d日 %H:%M:%S %A")|g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
