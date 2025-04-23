@@ -36,6 +36,7 @@ mv package/small/iptvhelper package/iptvhelper
 mv package/small/luci-app-iptvhelper package/luci-app-iptvhelper
 mv package/small/luci-app-timecontrol package/luci-app-timecontrol
 sed -i 's/"admin", "control"/"admin", "network"/g' package/luci-app-timecontrol/luasrc/controller/*.lua
+sed -i 's/("Internet Time Control"), 10)/("Internet Time Control"), 90)/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 mv package/small/cdnspeedtest package/cdnspeedtest
 mv package/small/luci-app-cloudflarespeedtest package/luci-app-cloudflarespeedtest
 mv package/small/luci-app-dnsfilter package/luci-app-dnsfilter
