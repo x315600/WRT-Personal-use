@@ -37,6 +37,7 @@ find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+sed -i 's/30/2/g' package/mosdns/luci-app-mosdns/root/usr/share/luci/menu.d/*.json
 
 # 添加passwall
 rm -rf feeds/luci/applications/luci-app-passwall
@@ -55,10 +56,12 @@ git clone --depth=1 https://github.com/kenzok8/small-package package/small
 rm -rf feeds/luci/applications/luci-app-timecontrol
 mv package/small/luci-app-timecontrol package/luci-app-timecontrol
 sed -i 's/control/system/g' package/luci-app-timecontrol/luasrc/controller/*.lua
+sed -i 's/"admin", "control"/"admin", "system"/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 
 # openclash
 rm -rf feeds/luci/applications/luci-app-openclash
 mv package/small/luci-app-openclash package/luci-app-openclash
+sed -i 's|("OpenClash"), 50)|("OpenClash"), 1)|g' package/luci-app-openclash/luasrc/controller/*.lua
 
 # fileassistant
 rm -rf feeds/luci/applications/luci-app-fileassistant
@@ -80,6 +83,7 @@ mv package/small/luci-app-design-config package/luci-app-design-config
 # aria2
 rm -rf feeds/packages/net/aria2
 mv package/small/aria2 feeds/packages/net/aria2
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-aria2/root/usr/share/luci/menu.d/*.json
 
 # netdata
 # rm -rf feeds/packages/admin/netdata
@@ -156,6 +160,9 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 # Default IP
 #sed -i 's/192.168.1.1/192.168.6.101/g' package/base-files/files/bin/config_generate
 #sed -i 's/ImmortalWrt/N11/g' package/base-files/files/bin/config_generate
+
+sed -i 's/vpn/nas/g' feeds/luci/applications/luci-app-zerotier/root/usr/share/luci/menu.d/*.json
+
 
 
 #删除库中的插件，使用自定义源中的包。
