@@ -12,7 +12,6 @@ config dnsmasq
 	option leasefile '/tmp/dhcp.leases'
 	option localservice '1'
 	option ednspacket_max '1232'
-	option noresolv '1'
 	option nonegcache '1'
 	option cachesize '0'
 
