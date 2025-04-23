@@ -73,6 +73,7 @@ sed -i 's/control/system/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 # openclash
 rm -rf feeds/luci/applications/luci-app-openclash
 mv package/small/luci-app-openclash package/luci-app-openclash
+sed -i 's|("OpenClash"), 50)|("OpenClash"), 1)|g' package/luci-app-openclash/luasrc/controller/*.lua
 
 # fileassistant
 rm -rf feeds/luci/applications/luci-app-fileassistant
