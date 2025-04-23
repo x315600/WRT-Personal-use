@@ -104,7 +104,7 @@ mv package/small/haproxy feeds/packages/net/haproxy
 rm -rf feeds/packages/net/aria2
 mv package/small/aria2 feeds/packages/net/aria2
 # 调整到网络存储菜单
-sed -i 's/services/nas/g' feeds/luci/applications/luci-app-aria2/luasrc/controller/*.lua
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-aria2/root/usr/share/luci/menu.d/*.json
 
 # netdata
 rm -rf feeds/packages/admin/netdata
@@ -200,7 +200,7 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 
 # TTYD调整到系统菜单
 sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/*.json
-sed -i 's/vpn/nas/g' feeds/luci/applications/luci-app-zerotier/luasrc/controller/*.lua
+sed -i 's/vpn/nas/g' feeds/luci/applications/luci-app-zerotier/root/usr/share/luci/menu.d/*.json
 
 #修改默认时间格式
 sed -i 's|os.date()|os.date("%Y/%m/%d %H:%M:%S %A")|g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
