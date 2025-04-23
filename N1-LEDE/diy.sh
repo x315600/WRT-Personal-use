@@ -31,6 +31,7 @@ git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-a
 
 git clone --depth=1 https://github.com/kenzok8/small-package package/small
 mv package/small/luci-app-openclash package/luci-app-openclash
+sed -i 's|("OpenClash"), 50)|("OpenClash"), 1)|g' package/luci-app-openclash/luasrc/controller/*.lua
 mv package/small/iptvhelper package/iptvhelper
 mv package/small/luci-app-iptvhelper package/luci-app-iptvhelper
 mv package/small/luci-app-timecontrol package/luci-app-timecontrol
@@ -125,7 +126,8 @@ git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/l
 # mosdns
 # 旧版luci(lua)
 git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
-# 新版luci
+sed -i 's|("MosDNS"), 30)|("MosDNS"), 5)|g' package/mosdns/luci-app-mosdns/luasrc/controller/*.lua
+
 #find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 #find ./ | grep Makefile | grep mosdns | xargs rm -f
 #git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
