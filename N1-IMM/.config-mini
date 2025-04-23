@@ -168,34 +168,34 @@ CONFIG_PACKAGE_wpad-basic=y
 CONFIG_PACKAGE_iw=y
 
 # Python
-CONFIG_PACKAGE_libpython3=n
-CONFIG_PACKAGE_python-pip-conf=n
-CONFIG_PACKAGE_python3=n
-CONFIG_PACKAGE_python3-asyncio=n
-CONFIG_PACKAGE_python3-attrs=n
-CONFIG_PACKAGE_python3-base=n
-CONFIG_PACKAGE_python3-bcrypt=n
-CONFIG_PACKAGE_python3-cached-property=n
-CONFIG_PACKAGE_python3-certifi=n
-CONFIG_PACKAGE_python3-cffi=n
-CONFIG_PACKAGE_python3-cgi=n
-CONFIG_PACKAGE_python3-cgitb=n
-CONFIG_PACKAGE_python3-chardet=n
-CONFIG_PACKAGE_python3-click=n
-CONFIG_PACKAGE_python3-codecs=n
-CONFIG_PACKAGE_python3-ctypes=n
-CONFIG_PACKAGE_python3-dateutil=n
-CONFIG_PACKAGE_python3-dbm=n
-CONFIG_PACKAGE_python3-decimal=n
-CONFIG_PACKAGE_python3-distro=n
-CONFIG_PACKAGE_python3-distutils=n
-CONFIG_PACKAGE_python3-dns=n
-CONFIG_PACKAGE_python3-docopt=n
-CONFIG_PACKAGE_python3-dotenv=n
-CONFIG_PACKAGE_python3-email=n
-CONFIG_PACKAGE_python3-idna=n
-CONFIG_PACKAGE_python3-jsonschema=n
-CONFIG_PACKAGE_python3-light=n
+CONFIG_PACKAGE_libpython3=y
+CONFIG_PACKAGE_python-pip-conf=y
+CONFIG_PACKAGE_python3=y
+CONFIG_PACKAGE_python3-asyncio=y
+CONFIG_PACKAGE_python3-attrs=y
+CONFIG_PACKAGE_python3-base=y
+CONFIG_PACKAGE_python3-bcrypt=y
+CONFIG_PACKAGE_python3-cached-property=y
+CONFIG_PACKAGE_python3-certifi=y
+CONFIG_PACKAGE_python3-cffi=y
+CONFIG_PACKAGE_python3-cgi=y
+CONFIG_PACKAGE_python3-cgitb=y
+CONFIG_PACKAGE_python3-chardet=y
+CONFIG_PACKAGE_python3-click=y
+CONFIG_PACKAGE_python3-codecs=y
+CONFIG_PACKAGE_python3-ctypes=y
+CONFIG_PACKAGE_python3-dateutil=y
+CONFIG_PACKAGE_python3-dbm=y
+CONFIG_PACKAGE_python3-decimal=y
+CONFIG_PACKAGE_python3-distro=y
+CONFIG_PACKAGE_python3-distutils=y
+CONFIG_PACKAGE_python3-dns=y
+CONFIG_PACKAGE_python3-docopt=y
+CONFIG_PACKAGE_python3-dotenv=y
+CONFIG_PACKAGE_python3-email=y
+CONFIG_PACKAGE_python3-idna=y
+CONFIG_PACKAGE_python3-jsonschema=y
+CONFIG_PACKAGE_python3-light=y
 
 #
 # Configuration
@@ -203,11 +203,11 @@ CONFIG_PACKAGE_python3-light=n
 # CONFIG_PYTHON3_HOST_PIP_CACHE_WORLD_READABLE is not set
 # end of Configuration
 
-CONFIG_PACKAGE_python3-logging=n
-CONFIG_PACKAGE_python3-lxml=n
-CONFIG_PACKAGE_python3-lzma=n
-CONFIG_PACKAGE_python3-multiprocessing=n
-CONFIG_PACKAGE_python3-ncurses=n
+CONFIG_PACKAGE_python3-logging=y
+CONFIG_PACKAGE_python3-lxml=y
+CONFIG_PACKAGE_python3-lzma=y
+CONFIG_PACKAGE_python3-multiprocessing=y
+CONFIG_PACKAGE_python3-ncurses=y
 
 #
 # Configuration
@@ -215,13 +215,13 @@ CONFIG_PACKAGE_python3-ncurses=n
 # CONFIG_NUMPY_OPENBLAS_SUPPORT is not set
 # end of Configuration
 
-CONFIG_PACKAGE_python3-openssl=n
-CONFIG_PACKAGE_python3-pip=n
-CONFIG_PACKAGE_python3-pkg-resources=n
-CONFIG_PACKAGE_python3-ply=n
-CONFIG_PACKAGE_python3-pycparser=n
-CONFIG_PACKAGE_python3-pydoc=n
-CONFIG_PACKAGE_python3-pymysql=n
+CONFIG_PACKAGE_python3-openssl=y
+CONFIG_PACKAGE_python3-pip=y
+CONFIG_PACKAGE_python3-pkg-resources=y
+CONFIG_PACKAGE_python3-ply=y
+CONFIG_PACKAGE_python3-pycparser=y
+CONFIG_PACKAGE_python3-pydoc=y
+CONFIG_PACKAGE_python3-pymysql=y
 
 #
 # Configuration
@@ -229,23 +229,23 @@ CONFIG_PACKAGE_python3-pymysql=n
 # CONFIG_PYTHON3_PYMYSQL_SHA_PASSWORD_SUPPORT is not set
 # end of Configuration
 
-CONFIG_PACKAGE_python3-pynacl=n
-CONFIG_PACKAGE_python3-pyrsistent=n
-CONFIG_PACKAGE_python3-readline=n
-CONFIG_PACKAGE_python3-requests=n
-CONFIG_PACKAGE_python3-setuptools=n
-CONFIG_PACKAGE_python3-simplejson=n
-CONFIG_PACKAGE_python3-six=n
-CONFIG_PACKAGE_python3-speedtest-cli=n
-CONFIG_PACKAGE_python3-sqlalchemy=n
-CONFIG_PACKAGE_python3-sqlite3=n
-CONFIG_PACKAGE_python3-texttable=n
-CONFIG_PACKAGE_python3-unittest=n
-CONFIG_PACKAGE_python3-urllib=n
-CONFIG_PACKAGE_python3-urllib3=n
-CONFIG_PACKAGE_python3-uuid=n
-CONFIG_PACKAGE_python3-websocket-client=n
-CONFIG_PACKAGE_python3-xml=n
-CONFIG_PACKAGE_python3-yaml=n
+CONFIG_PACKAGE_python3-pynacl=y
+CONFIG_PACKAGE_python3-pyrsistent=y
+CONFIG_PACKAGE_python3-readline=y
+CONFIG_PACKAGE_python3-requests=y
+CONFIG_PACKAGE_python3-setuptools=y
+CONFIG_PACKAGE_python3-simplejson=y
+CONFIG_PACKAGE_python3-six=y
+CONFIG_PACKAGE_python3-speedtest-cli=y
+CONFIG_PACKAGE_python3-sqlalchemy=y
+CONFIG_PACKAGE_python3-sqlite3=y
+CONFIG_PACKAGE_python3-texttable=y
+CONFIG_PACKAGE_python3-unittest=y
+CONFIG_PACKAGE_python3-urllib=y
+CONFIG_PACKAGE_python3-urllib3=y
+CONFIG_PACKAGE_python3-uuid=y
+CONFIG_PACKAGE_python3-websocket-client=y
+CONFIG_PACKAGE_python3-xml=y
+CONFIG_PACKAGE_python3-yaml=y
 
 # end of Python
