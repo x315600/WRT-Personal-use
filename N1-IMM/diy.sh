@@ -54,6 +54,7 @@ git clone --depth=1 https://github.com/kenzok8/small-package package/small
 # timecontrol
 rm -rf feeds/luci/applications/luci-app-timecontrol
 mv package/small/luci-app-timecontrol package/luci-app-timecontrol
+sed -i 's/control/system/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 
 # openclash
 rm -rf feeds/luci/applications/luci-app-openclash
@@ -64,8 +65,8 @@ rm -rf feeds/luci/applications/luci-app-fileassistant
 mv package/small/luci-app-fileassistant package/luci-app-fileassistant
 
 # dockerman
-# rm -rf feeds/luci/applications/luci-app-dockerman
-# mv package/small/luci-app-dockerman package/luci-app-dockerman
+rm -rf feeds/luci/applications/luci-app-dockerman
+mv package/small/luci-app-dockerman package/luci-app-dockerman
 
 # serverchan
 # rm -rf feeds/luci/applications/luci-app-serverchan
@@ -136,9 +137,10 @@ git clone --depth 1 https://github.com/sbwml/luci-app-alist package/alist
 
 # 启用frp, luci用自带, frp第三方更新版本
 rm -rf feeds/packages/net/frp
-# rm -rf feeds/luci/applications/luci-app-frps
-# rm -rf feeds/luci/applications/luci-app-frpc
+rm -rf feeds/luci/applications/luci-app-frps
+rm -rf feeds/luci/applications/luci-app-frpc
 git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
+git clone --depth=1 https://github.com/superzjg/luci-app-frpc_frps package/luci-app-frpc_frps
 # git clone https://github.com/kuoruan/openwrt-frp -b v0.53.2-1 feeds/packages/net/frp
 # git clone https://github.com/user1121114685/frp.git feeds/packages/net/frp
 # rm -rf feeds/luci/applications/luci-app-frps
@@ -151,8 +153,8 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 
 
 # Default IP
-sed -i 's/192.168.1.1/192.168.6.101/g' package/base-files/files/bin/config_generate
-sed -i 's/ImmortalWrt/N11/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.6.101/g' package/base-files/files/bin/config_generate
+#sed -i 's/ImmortalWrt/N11/g' package/base-files/files/bin/config_generate
 
 
 #删除库中的插件，使用自定义源中的包。
