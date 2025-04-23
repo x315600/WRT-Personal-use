@@ -35,6 +35,7 @@ sed -i 's|("OpenClash"), 50)|("OpenClash"), 1)|g' package/luci-app-openclash/lua
 mv package/small/iptvhelper package/iptvhelper
 mv package/small/luci-app-iptvhelper package/luci-app-iptvhelper
 mv package/small/luci-app-timecontrol package/luci-app-timecontrol
+sed -i 's/"admin", "control"/"admin", "network"/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 mv package/small/cdnspeedtest package/cdnspeedtest
 mv package/small/luci-app-cloudflarespeedtest package/luci-app-cloudflarespeedtest
 mv package/small/luci-app-dnsfilter package/luci-app-dnsfilter
