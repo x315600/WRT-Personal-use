@@ -55,7 +55,6 @@ git clone --depth=1 https://github.com/kenzok8/small-package package/small
 # timecontrol
 rm -rf feeds/luci/applications/luci-app-timecontrol
 mv package/small/luci-app-timecontrol package/luci-app-timecontrol
-sed -i 's/control/system/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 sed -i 's/"admin", "control"/"admin", "system"/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 
 # openclash
