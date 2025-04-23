@@ -131,9 +131,10 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 #git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
 # alist
-rm -rf feeds/packages/net/alist
-rm -rf feeds/luci/applications/luci-app-alist
-git clone --depth 1 https://github.com/sbwml/luci-app-alist package/alist
+# rm -rf feeds/packages/net/alist
+# rm -rf feeds/luci/applications/luci-app-alist
+# git clone --depth 1 https://github.com/sbwml/luci-app-alist package/alist
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-alist/root/usr/share/luci/menu.d/*.json
 
 # 启用frp, luci用自带, frp第三方更新版本
 rm -rf feeds/packages/net/frp
