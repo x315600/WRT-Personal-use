@@ -200,6 +200,7 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 
 # TTYD调整到系统菜单
 sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/*.json
+sed -i 's/vpn/nas/g' feeds/luci/applications/luci-app-zerotier/luasrc/controller/*.lua
 
 #修改默认时间格式
 sed -i 's|os.date()|os.date("%Y/%m/%d %H:%M:%S %A")|g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
