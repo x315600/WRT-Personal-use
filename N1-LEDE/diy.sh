@@ -9,6 +9,34 @@ function git_sparse_clone() {
   cd .. && rm -rf $repodir
 }
 
+# Remove packages
+#删除lean库中的插件，使用自定义源中的包。
+rm -rf feeds/packages/net/v2ray-geodata
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-argon-config
+rm -rf feeds/packages/net/mosdns
+rm -rf feeds/packages/utils/v2dat
+rm -rf feeds/luci/applications/luci-app-mosdns
+#rm -rf feeds/luci/themes/luci-theme-design
+#rm -rf feeds/luci/applications/luci-app-design-config
+
+# 自定义
+rm -rf feeds/luci/applications/luci-app-wol
+rm -rf feeds/packages/net/ddns-go
+# rm -rf feeds/packages/net/frp
+# rm -rf feeds/luci/applications/luci-app-frps
+# rm -rf feeds/luci/applications/luci-app-frpc
+rm -rf feeds/packages/net/msd_lite
+# rm -rf feeds/luci/applications/luci-app-wrtbwmon
+# rm -rf feeds/packages/admin/netdata
+# rm -rf feeds/luci/applications/luci-app-netdata
+# rm -rf feeds/packages/net/qBittorrent
+# rm -rf feeds/packages/net/qBittorrent-static
+# rm -rf feeds/luci/applications/luci-app-qbittorrent
+# rm -rf feeds/packages/net/alist
+rm -rf feeds/luci/applications/luci-app-serverchan
+rm -rf feeds/packages/net/lucky
+
 #添加科学上网源
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
@@ -41,34 +69,6 @@ sed -i 's/"admin", "control"/"admin", "network"/g' package/luci-app-timecontrol/
 sed -i 's/("Internet Time Control"), 10)/("Internet Time Control"), 90)/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 sed -i 's|("MosDNS"), 30)|("MosDNS"), 5)|g' package/luci-app-mosdns/luasrc/controller/*.lua
 sed -i 's/"admin", "vpn"/"admin", "nas"/g' feeds/luci/applications/luci-app-zerotier/luasrc/controller/*.lua
-
-# Remove packages
-#删除lean库中的插件，使用自定义源中的包。
-rm -rf feeds/packages/net/v2ray-geodata
-rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-argon-config
-rm -rf feeds/packages/net/mosdns
-rm -rf feeds/packages/utils/v2dat
-rm -rf feeds/luci/applications/luci-app-mosdns
-#rm -rf feeds/luci/themes/luci-theme-design
-#rm -rf feeds/luci/applications/luci-app-design-config
-
-# 自定义
-rm -rf feeds/luci/applications/luci-app-wol
-rm -rf feeds/packages/net/ddns-go
-# rm -rf feeds/packages/net/frp
-# rm -rf feeds/luci/applications/luci-app-frps
-# rm -rf feeds/luci/applications/luci-app-frpc
-rm -rf feeds/packages/net/msd_lite
-# rm -rf feeds/luci/applications/luci-app-wrtbwmon
-# rm -rf feeds/packages/admin/netdata
-# rm -rf feeds/luci/applications/luci-app-netdata
-# rm -rf feeds/packages/net/qBittorrent
-# rm -rf feeds/packages/net/qBittorrent-static
-# rm -rf feeds/luci/applications/luci-app-qbittorrent
-# rm -rf feeds/packages/net/alist
-rm -rf feeds/luci/applications/luci-app-serverchan
-rm -rf feeds/packages/net/lucky
 
 
 # 1 启用 frps
