@@ -32,7 +32,7 @@ rm -rf feeds/packages/net/msd_lite
 # rm -rf feeds/packages/net/qBittorrent
 # rm -rf feeds/packages/net/qBittorrent-static
 # rm -rf feeds/luci/applications/luci-app-qbittorrent
-# rm -rf feeds/packages/net/alist
+rm -rf feeds/packages/net/alist
 rm -rf feeds/luci/applications/luci-app-serverchan
 rm -rf feeds/packages/net/lucky
 
@@ -65,6 +65,7 @@ mv package/RB/* package
 rm -rf package/RB
 sed -i 's|("OpenClash"), 50)|("OpenClash"), 1)|g' package/luci-app-openclash/luasrc/controller/*.lua
 sed -i 's/"admin", "control"/"admin", "network"/g' package/luci-app-timecontrol/luasrc/controller/*.lua
+sed -i 's/firstchild(), "Control", 44/firstchild(), "Network", 44/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 sed -i 's/("Internet Time Control"), 10)/("Internet Time Control"), 90)/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 sed -i 's|("MosDNS"), 30)|("MosDNS"), 5)|g' package/luci-app-mosdns/luasrc/controller/*.lua
 sed -i 's/"admin", "vpn"/"admin", "nas"/g' feeds/luci/applications/luci-app-zerotier/luasrc/controller/*.lua
