@@ -163,8 +163,6 @@ jobs:
         PACKAGE_SOC: s905d
         WHOAMI: Lein
         OPENWRT_VER: $(date +"%Y.%m.%d")
-        SW_FLOWOFFLOAD: 0
-        HW_FLOWOFFLOAD: 0
         SFE_FLOW: 0
 
     - name: Tar Packages
