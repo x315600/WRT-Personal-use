@@ -45,7 +45,6 @@ git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 #git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
-git clone -b lua --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
 
 # golang版本修复
 rm -rf feeds/packages/lang/golang
