@@ -23,7 +23,6 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 # 自定义
 rm -rf feeds/luci/applications/luci-app-wol
 rm -rf feeds/packages/net/ddns-go
-# rm -rf feeds/packages/net/frp
 # rm -rf feeds/luci/applications/luci-app-frps
 # rm -rf feeds/luci/applications/luci-app-frpc
 rm -rf feeds/packages/net/msd_lite
