@@ -178,7 +178,7 @@ jobs:
       uses: ncipollo/release-action@main
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
-        name: OpenWrt-LEDE for N1[mini] - ${{ env.RELEASE_DATE }}
+        name: OpenWrt-LEDE[18.06] for N1[mini] - ${{ env.RELEASE_DATE }}
         tag: LEDE_N1_mini_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
