@@ -39,9 +39,9 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 sed -i 's/30/2/g' package/mosdns/luci-app-mosdns/root/usr/share/luci/menu.d/*.json
 
 # 添加passwall
-rm -rf feeds/luci/applications/luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+# rm -rf feeds/luci/applications/luci-app-passwall
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 
 # nps
 rm -rf feeds/packages/net/nps
@@ -73,8 +73,8 @@ rm -rf feeds/luci/applications/luci-app-fileassistant
 mv package/small/luci-app-fileassistant package/luci-app-fileassistant
 
 # dockerman
-rm -rf feeds/luci/applications/luci-app-dockerman
-mv package/small/luci-app-dockerman package/luci-app-dockerman
+# rm -rf feeds/luci/applications/luci-app-dockerman
+# mv package/small/luci-app-dockerman package/luci-app-dockerman
 
 # serverchan
 # rm -rf feeds/luci/applications/luci-app-serverchan
