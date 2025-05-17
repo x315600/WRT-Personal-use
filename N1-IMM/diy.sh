@@ -82,7 +82,8 @@ mv package/small/luci-app-dockerman package/luci-app-dockerman
 
 # design主题
 rm -rf feeds/luci/themes/luci-theme-design
-mv package/small/luci-theme-design package/luci-theme-design
+# mv package/small/luci-theme-design package/luci-theme-design
+git clone -b js https://github.com/0x676e67/luci-theme-design package/luci-theme-design
 mv package/small/luci-app-design-config package/luci-app-design-config
 
 # aria2
