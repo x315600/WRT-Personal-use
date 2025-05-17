@@ -32,7 +32,6 @@ rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/utils/v2dat
 rm -rf feeds/luci/applications/luci-app-mosdns
-#git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
@@ -67,6 +66,7 @@ sed -i 's|("OpenClash"), 50)|("OpenClash"), 1)|g' package/luci-app-openclash/lua
 # nikki
 mv package/small/luci-app-nikki package/luci-app-nikki
 mv package/small/nikki package/nikki
+sed -i 's/10/3/g' package/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
 
 # fileassistant
 rm -rf feeds/luci/applications/luci-app-fileassistant
