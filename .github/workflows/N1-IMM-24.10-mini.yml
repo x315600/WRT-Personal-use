@@ -152,11 +152,11 @@ jobs:
         PACKAGE_SOC: s905d
         WHOAMI: Lein
         OPENWRT_VER: $(date +"%Y.%m.%d")
-        SW_FLOWOFFLOAD: 0
-        HW_FLOWOFFLOAD: 0
-        SFE_FLOW: 0
-        ENABLE_WIFI_K504: 0
-        ENABLE_WIFI_K510: 0
+        #SW_FLOWOFFLOAD: 0
+        #HW_FLOWOFFLOAD: 0
+        #SFE_FLOW: 0
+        #ENABLE_WIFI_K504: 0
+        #ENABLE_WIFI_K510: 0
 
     - name: Tar Packages
       run: |
@@ -171,7 +171,7 @@ jobs:
       uses: ncipollo/release-action@main
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
-        name: OpenWrt-IMM for N1[mini] - ${{ env.RELEASE_DATE }}
+        name: OpenWrt-ImmortalWRT[24.10] for N1[mini] - ${{ env.RELEASE_DATE }}
         tag: IMM_N1_mini_${{ env.PACKAGED_OUTPUTDATE }}
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
