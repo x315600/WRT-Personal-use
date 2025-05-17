@@ -3,7 +3,7 @@ name: N1-LEDE-mini
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8 */5 * *"
+    - cron: "0 6 */5 * *"
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
