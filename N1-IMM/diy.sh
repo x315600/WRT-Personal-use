@@ -56,11 +56,17 @@ git clone --depth=1 https://github.com/kenzok8/small-package package/small
 rm -rf feeds/luci/applications/luci-app-timecontrol
 mv package/small/luci-app-timecontrol package/luci-app-timecontrol
 sed -i 's/"admin", "control"/"admin", "network"/g' package/luci-app-timecontrol/luasrc/controller/*.lua
+sed -i 's/firstchild(), "Control", 44/firstchild(), "Network", 44/g' package/luci-app-timecontrol/luasrc/controller/*.lua
+sed -i 's/("Internet Time Control"), 10)/("Internet Time Control"), 90)/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 
 # openclash
 rm -rf feeds/luci/applications/luci-app-openclash
 mv package/small/luci-app-openclash package/luci-app-openclash
 sed -i 's|("OpenClash"), 50)|("OpenClash"), 1)|g' package/luci-app-openclash/luasrc/controller/*.lua
+
+# nikki
+mv package/small/luci-app-nikki package/luci-app-nikki
+mv package/small/nikki package/nikki
 
 # fileassistant
 rm -rf feeds/luci/applications/luci-app-fileassistant
