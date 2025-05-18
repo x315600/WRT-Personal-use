@@ -100,6 +100,9 @@ jobs:
       working-directory: ./
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
+        rm -rf openwrt/package/network/services/dropbear
+        git clone --depth=1 https://github.com/RayleanB/dropbear dropbear
+        rm -rf dropbear/.git && mv -f dropbear openwrt/package/network/services
 
     - name: cache wrt build
       uses: stupidloud/cachewrtbuild@main
