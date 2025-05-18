@@ -116,8 +116,10 @@ mv package/small/luci-app-cloudflarespeedtest package/luci-app-cloudflarespeedte
 mv package/small/luci-app-dnsfilter package/luci-app-dnsfilter
 
 # KMS
-# rm -rf feeds/packages/net/vlmcsd
-# mv package/small/vlmcsd package/vlmcsd
+rm -rf feeds/packages/net/vlmcsd
+rm -rf feeds/luci/applications/luci-app-vlmcsd
+mv package/small/vlmcsd feeds/packages/net/vlmcsd
+mv package/small/luci-app-vlmcsd feeds/luci/applications/luci-app-vlmcsd
 
 mv package/small/luci-app-wolplus package/luci-app-wolplus
 mv package/small/luci-app-poweroff package/luci-app-poweroff
