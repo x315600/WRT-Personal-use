@@ -68,6 +68,10 @@ mv package/small/luci-app-nikki package/luci-app-nikki
 mv package/small/nikki package/nikki
 sed -i 's/"title": "Nikki",/&\n        "order": 3,/g' package/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
 
+# ttyd
+sed -i 's/"title": "Terminal",/&\n        "order": 10,/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json
+sed -i 's/msgstr "终端"/msgstr "TTYD终端"/g' feeds/luci/applications/luci-app-ttyd/po/zh_Hans/ttyd.po
+
 # fileassistant
 rm -rf feeds/luci/applications/luci-app-fileassistant
 mv package/small/luci-app-fileassistant package/luci-app-fileassistant
