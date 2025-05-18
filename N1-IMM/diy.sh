@@ -66,7 +66,7 @@ sed -i 's|("OpenClash"), 50)|("OpenClash"), 1)|g' package/luci-app-openclash/lua
 # nikki
 mv package/small/luci-app-nikki package/luci-app-nikki
 mv package/small/nikki package/nikki
-sed -i 's/10/3/g' package/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
+sed -i 's/"title": "Nikki",/&\n        "order": 3,/g' package/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
 
 # fileassistant
 rm -rf feeds/luci/applications/luci-app-fileassistant
@@ -116,8 +116,8 @@ mv package/small/luci-app-cloudflarespeedtest package/luci-app-cloudflarespeedte
 mv package/small/luci-app-dnsfilter package/luci-app-dnsfilter
 
 # KMS
-rm -rf feeds/packages/net/vlmcsd
-mv package/small/vlmcsd package/vlmcsd
+# rm -rf feeds/packages/net/vlmcsd
+# mv package/small/vlmcsd package/vlmcsd
 
 mv package/small/luci-app-wolplus package/luci-app-wolplus
 mv package/small/luci-app-poweroff package/luci-app-poweroff
