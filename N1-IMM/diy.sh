@@ -40,6 +40,7 @@ sed -i 's/30/2/g' package/mosdns/luci-app-mosdns/root/usr/share/luci/menu.d/*.js
 
 # qbittorrent-static
 git clone https://github.com/teleostnacl/luci-app-qbittorrent-static package/qbittorrent-static
+sed -i 's/services/nas/g' package/qbittorrent-static/luci-app-qbittorrent-static/root/usr/share/luci/menu.d/luci-app-qbittorrent.json
 
 # 添加passwall
 # rm -rf feeds/luci/applications/luci-app-passwall
