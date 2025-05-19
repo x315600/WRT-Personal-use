@@ -8,7 +8,7 @@ on:
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-24.10
-  CONFIG_FILE: N1-IMM/.config-mini
+  CONFIG_FILE: N1-IMM/.config-test
   DIY_SH: N1-IMM/diy.sh
   FILES: N1-IMM/files
   TZ: Asia/Shanghai
