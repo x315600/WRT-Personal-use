@@ -16,7 +16,7 @@ config interface 'lan'
 	option dns '192.168.6.1'
 	option ipaddr '192.168.6.100'
 
-config interface 'vpn0'
-	option ifname 'tun0'
-	option proto 'none'
+#config interface 'vpn0'
+#	option ifname 'tun0'
+#	option proto 'none'
 
