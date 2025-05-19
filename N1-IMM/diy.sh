@@ -39,13 +39,8 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 sed -i 's/30/2/g' package/mosdns/luci-app-mosdns/root/usr/share/luci/menu.d/*.json
 
 # qbittorrent-static
-rm -rf feeds/packages/net/qBittorrent-Enhanced-Edition
-rm -rf feeds/luci/applications/luci-app-qbittorrent
 git clone --depth=1 https://github.com/teleostnacl/luci-app-qbittorrent-static package/qb
-mv -f package/qb/luci-app-qbittorrent-static feeds/luci/applications/luci-app-qbittorrent-static
-mv -f package/qb/qbittorrent-nox-static feeds/packages/net/qbittorrent-nox-static
-rm -rf package/qb
-sed -i 's/services/nas/g' feeds/luci/applications/luci-app-qbittorrent-static/root/usr/share/luci/menu.d/luci-app-qbittorrent.json
+sed -i 's/services/nas/g' package/qb/luci-app-qbittorrent-static/root/usr/share/luci/menu.d/luci-app-qbittorrent.json
 
 # 添加passwall
 # rm -rf feeds/luci/applications/luci-app-passwall
@@ -70,12 +65,12 @@ sed -i 's/("Internet Time Control"), 10)/("Internet Time Control"), 90)/g' packa
 # openclash
 rm -rf feeds/luci/applications/luci-app-openclash
 mv package/small/luci-app-openclash package/luci-app-openclash
-sed -i 's|("OpenClash"), 50)|("OpenClash"), 1)|g' package/luci-app-openclash/luasrc/controller/*.lua
+sed -i 's|("OpenClash"), 50)|("OpenClash"), 3)|g' package/luci-app-openclash/luasrc/controller/*.lua
 
 # nikki
 mv package/small/luci-app-nikki package/luci-app-nikki
 mv package/small/nikki package/nikki
-sed -i 's/"title": "Nikki",/&\n        "order": 3,/g' package/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
+sed -i 's/"title": "Nikki",/&\n        "order": 1,/g' package/luci-app-nikki/root/usr/share/luci/menu.d/luci-app-nikki.json
 
 # ttyd
 sed -i 's/"title": "Terminal",/&\n        "order": 10,/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json
