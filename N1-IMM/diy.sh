@@ -39,11 +39,13 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 sed -i 's/30/2/g' package/mosdns/luci-app-mosdns/root/usr/share/luci/menu.d/*.json
 
 # qbittorrent-static
+rm -rf feeds/packages/net/qBittorrent-Enhanced-Edition
+rm -rf feeds/luci/applications/luci-app-qbittorrent
 git clone --depth=1 https://github.com/teleostnacl/luci-app-qbittorrent-static package/qb
-mv -f package/qb/luci-app-qbittorrent-static package/luci-app-qbittorrent-static
-mv -f package/qb/qbittorrent-nox-static package/qbittorrent-nox-static
+mv -f package/qb/luci-app-qbittorrent-static feeds/luci/applications/luci-app-qbittorrent-static
+mv -f package/qb/qbittorrent-nox-static feeds/packages/net/qbittorrent-nox-static
 rm -rf package/qb
-sed -i 's/services/nas/g' package/luci-app-qbittorrent-static/root/usr/share/luci/menu.d/luci-app-qbittorrent.json
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-qbittorrent-static/root/usr/share/luci/menu.d/luci-app-qbittorrent.json
 
 # 添加passwall
 # rm -rf feeds/luci/applications/luci-app-passwall
