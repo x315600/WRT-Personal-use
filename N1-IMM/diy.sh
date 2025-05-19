@@ -119,6 +119,8 @@ mv package/small/luci-app-iptvhelper package/luci-app-iptvhelper
 # cloudflarespeedtest
 # mv package/small/cdnspeedtest package/cdnspeedtest
 mv package/small/luci-app-cloudflarespeedtest package/luci-app-cloudflarespeedtest
+sed -i 's|Cloudflare速度测试|CF速度测试|g' package/luci-app-cloudflarespeedtest/po/zh-cn/cloudflarespeedtest.po
+sed -i 's|Cloudflare速度测试|CF速度测试|g' package/luci-app-cloudflarespeedtest/po/zh_Hans/cloudflarespeedtest.po
 
 # dnsfilter
 mv package/small/luci-app-dnsfilter package/luci-app-dnsfilter
