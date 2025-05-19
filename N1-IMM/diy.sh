@@ -38,6 +38,9 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 sed -i 's/30/2/g' package/mosdns/luci-app-mosdns/root/usr/share/luci/menu.d/*.json
 
+# qbittorrent-static
+git clone https://github.com/teleostnacl/luci-app-qbittorrent-static package/qbittorrent-static
+
 # 添加passwall
 # rm -rf feeds/luci/applications/luci-app-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
