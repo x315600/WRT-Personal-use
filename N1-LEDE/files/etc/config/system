@@ -16,5 +16,5 @@ config timeserver 'ntp'
 	list server 'ntp1.aliyun.com'
 	list server 'ntp.tencent.com'
 	list server 'ntp.ntsc.ac.cn'
-	list server 'time.apple.com'
+	list server 'cn.ntp.org.cn'
 
