@@ -39,8 +39,8 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 sed -i 's/30/2/g' package/mosdns/luci-app-mosdns/root/usr/share/luci/menu.d/*.json
 
 # qbittorrent-static
-git clone https://github.com/teleostnacl/luci-app-qbittorrent-static package/qbittorrent-static
-sed -i 's/services/nas/g' package/qbittorrent-static/luci-app-qbittorrent-static/root/usr/share/luci/menu.d/luci-app-qbittorrent.json
+git clone https://github.com/teleostnacl/luci-app-qbittorrent-static package/qb
+sed -i 's/services/nas/g' package/qb/luci-app-qbittorrent-static/root/usr/share/luci/menu.d/luci-app-qbittorrent.json
 
 # 添加passwall
 # rm -rf feeds/luci/applications/luci-app-passwall
