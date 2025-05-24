@@ -86,7 +86,7 @@ config mixin 'mixin'
 	option sniffer_sniff_dns_mapping '1'
 	option sniffer_sniff_pure_ip '1'
 	option geox_auto_update '1'
-	option geox_update_interval '86400'
+	option geox_update_interval '24'
 
 config env 'env'
 	option disable_safe_path_check '0'
