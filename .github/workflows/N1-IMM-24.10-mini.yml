@@ -175,7 +175,8 @@ jobs:
       if: ${{ env.PACKAGED_STATUS == 'success' }} && !cancelled()
       with:
         name: OpenWrt-ImmortalWRT[24.10] for N1[mini] - ${{ env.RELEASE_DATE }}
-        tag: IMM_N1_mini_${{ env.PACKAGED_OUTPUTDATE }}
+        #tag: IMM_N1_mini_${{ env.PACKAGED_OUTPUTDATE }}
+        tag: N1_IMM_mini
         artifacts: /opt/openwrt_packit/output/*
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
