@@ -29,7 +29,7 @@ config proxy 'proxy'
 
 config subscription 'subscription'
 	option name 'airport'
-	option url 'https://xxx.com/clash/airport.yaml'
+	option url 'https://nc.com.cn/clash/airport.yaml'
 	option user_agent 'clash.meta'
 	option prefer 'remote'
 
