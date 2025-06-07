@@ -20,6 +20,7 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/themes/luci-theme-design
 #rm -rf feeds/luci/applications/luci-app-design-config
 
+
 # 自定义
 rm -rf feeds/luci/applications/luci-app-wol
 rm -rf feeds/packages/net/ddns-go
@@ -45,6 +46,10 @@ git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 #git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
+# iStore
+
+git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+git_sparse_clone main https://github.com/linkease/istore luci
 
 # golang版本修复
 rm -rf feeds/packages/lang/golang
@@ -79,7 +84,7 @@ git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
 # git clone https://github.com/user1121114685/luci-app-frps.git feeds/luci/applications/luci-app-frps
 
 # Default IP
-#sed -i 's/192.168.1.1/192.168.6.50/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
 
 # Set DISTRIB_REVISION
 sed -i "s/OpenWrt /Lein Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
