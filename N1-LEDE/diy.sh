@@ -83,8 +83,6 @@ git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
 # rm -rf feeds/luci/applications/luci-app-frps
 # git clone https://github.com/user1121114685/luci-app-frps.git feeds/luci/applications/luci-app-frps
 
-# Default IP
-sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
 
 # Set DISTRIB_REVISION
 sed -i "s/OpenWrt /Lein Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
@@ -96,8 +94,8 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 #sed -i 's/LEDE/N1/g' package/base-files/luci2/bin/config_generate
 
 # Modify default IP   第一行19.07的路径   第二行23.05的路径
-#sed -i 's/192.168.1.1/192.168.123.2/g' package/base-files/files/bin/config_generate
-#sed -i 's/192.168.1.1/192.168.6.50/g' package/base-files/luci2/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/luci2/bin/config_generate
 
 
 # 修改主题为默认
