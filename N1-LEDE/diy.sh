@@ -84,7 +84,7 @@ git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
 # git clone https://github.com/user1121114685/luci-app-frps.git feeds/luci/applications/luci-app-frps
 
 # Default IP
-#sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
 
 # Set DISTRIB_REVISION
 sed -i "s/OpenWrt /Lein Build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
