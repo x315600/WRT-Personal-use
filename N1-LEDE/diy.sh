@@ -94,7 +94,7 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 #sed -i 's/LEDE/N1/g' package/base-files/luci2/bin/config_generate
 
 # Modify default IP   第一行19.07的路径   第二行23.05的路径
-sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/files/bin/config_generate
 #sed -i 's/192.168.1.1/192.168.2.254/g' package/base-files/luci2/bin/config_generate
 
 
