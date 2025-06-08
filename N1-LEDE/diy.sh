@@ -72,7 +72,7 @@ sed -i 's/"admin", "control"/"admin", "network"/g' package/luci-app-timecontrol/
 sed -i 's/firstchild(), "Control", 44/firstchild(), "Network", 44/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 sed -i 's/("Internet Time Control"), 10)/("Internet Time Control"), 90)/g' package/luci-app-timecontrol/luasrc/controller/*.lua
 sed -i 's|("MosDNS"), 30)|("MosDNS"), 5)|g' package/luci-app-mosdns/luasrc/controller/*.lua
-sed -i 's/"admin", "vpn"/"admin", "nas"/g' feeds/luci/applications/luci-app-zerotier/luasrc/controller/*.lua
+# sed -i 's/"admin", "vpn"/"admin", "nas"/g' feeds/luci/applications/luci-app-zerotier/luasrc/controller/*.lua
 
 
 # 1 启用 frps
