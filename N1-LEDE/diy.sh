@@ -19,7 +19,7 @@ rm -rf feeds/packages/utils/v2dat
 rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/themes/luci-theme-design
 #rm -rf feeds/luci/applications/luci-app-design-config
-
+rm -rf feeds/luci/applications/luci-app-upnp
 
 # 自定义
 rm -rf feeds/luci/applications/luci-app-wol
