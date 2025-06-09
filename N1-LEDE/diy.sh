@@ -39,8 +39,9 @@ rm -rf feeds/luci/applications/luci-app-serverchan
 # lucky
 rm -rf feeds/packages/net/lucky
 rm -rf feeds/luci/applications/luci-app-lucky
-git clone --depth=1 https://github.com/gdy666/luci-app-lucky package/lucky
+rm -rf feeds/luci/applications/luci-i18n-lucky-zh-cn
 
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 #添加科学上网源
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
