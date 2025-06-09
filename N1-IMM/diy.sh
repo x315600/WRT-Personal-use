@@ -12,6 +12,11 @@ function git_sparse_clone() {
 # Default IP
 # sed -i 's/192.168.1.1/192.168.2.2/g' package/base-files/files/bin/config_generate
 
+# iStore
+
+git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
+git_sparse_clone main https://github.com/linkease/istore luci
+
 # lucky
 rm -rf feeds/packages/net/lucky
 rm -rf feeds/luci/applications/luci-app-lucky
@@ -43,9 +48,9 @@ git clone --depth=1 https://github.com/teleostnacl/luci-app-qbittorrent-static p
 sed -i 's/services/nas/g' package/qb/luci-app-qbittorrent-static/root/usr/share/luci/menu.d/luci-app-qbittorrent.json
 
 # 添加passwall
-# rm -rf feeds/luci/applications/luci-app-passwall
-# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
-# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+rm -rf feeds/luci/applications/luci-app-passwall
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 
 # nps
 rm -rf feeds/packages/net/nps
@@ -181,7 +186,7 @@ sed -i 's/invalid users = root/#invalid users = root/g' feeds/packages/net/samba
 #sed -i 's/192.168.1.1/192.168.6.101/g' package/base-files/files/bin/config_generate
 #sed -i 's/ImmortalWrt/N11/g' package/base-files/files/bin/config_generate
 
-sed -i 's/vpn/nas/g' feeds/luci/applications/luci-app-zerotier/root/usr/share/luci/menu.d/*.json
+#sed -i 's/vpn/nas/g' feeds/luci/applications/luci-app-zerotier/root/usr/share/luci/menu.d/*.json
 
 
 
