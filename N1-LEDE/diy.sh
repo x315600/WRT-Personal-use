@@ -37,9 +37,9 @@ rm -rf feeds/packages/net/alist
 rm -rf feeds/luci/applications/luci-app-serverchan
 
 # lucky
-rm -rf feeds/packages/net/lucky
-rm -rf feeds/luci/applications/luci-app-lucky
-rm -rf feeds/luci/applications/luci-i18n-lucky-zh-cn
+#rm -rf feeds/packages/net/lucky
+#rm -rf feeds/luci/applications/luci-app-lucky
+#rm -rf feeds/luci/applications/luci-i18n-lucky-zh-cn
 
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 #添加科学上网源
