@@ -37,7 +37,7 @@ rm -rf feeds/packages/net/alist
 rm -rf feeds/luci/applications/luci-app-serverchan
 
 # lucky
-#rm -rf feeds/packages/net/lucky
+rm -rf feeds/packages/net/lucky
 #rm -rf feeds/luci/applications/luci-app-lucky
 #rm -rf feeds/luci/applications/luci-i18n-lucky-zh-cn
 
