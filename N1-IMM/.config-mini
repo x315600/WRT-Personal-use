@@ -26,6 +26,7 @@ CONFIG_PACKAGE_ip6tables-mod-fullconenat=y
 
 # 添加L大仓库没有或替换其他源的插件
 CONFIG_PACKAGE_frpc=y
+CONFIG_PACKAGE_frps=y
 CONFIG_PACKAGE_screen=y
 CONFIG_PACKAGE_msd_lite=n
 CONFIG_PACKAGE_lucky=y
@@ -35,7 +36,7 @@ CONFIG_PACKAGE_luci-app-store=y
 CONFIG_PACKAGE_luci-app-amlogic=y
 CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_luci-app-samba4=y
-
+CONFIG_PACKAGE_luci-app-frps=y
 CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_luci-app-cifs-mount=y
 CONFIG_PACKAGE_luci-app-mosdns=y
