@@ -169,8 +169,9 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-alist/root/usr/share/
 rm -rf feeds/packages/net/frp
 rm -rf feeds/luci/applications/luci-app-frps
 rm -rf feeds/luci/applications/luci-app-frpc
-git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
-git clone --depth=1 https://github.com/superzjg/luci-app-frpc_frps package/luci-app-frpc_frps
+git clone --depth=1 https://github.com/justice2001/luci-app-multi-frpc package/frpc
+#git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
+#git clone --depth=1 https://github.com/superzjg/luci-app-frpc_frps package/luci-app-frpc_frps
 # git clone https://github.com/kuoruan/openwrt-frp -b v0.53.2-1 feeds/packages/net/frp
 # git clone https://github.com/user1121114685/frp.git feeds/packages/net/frp
 # rm -rf feeds/luci/applications/luci-app-frps
