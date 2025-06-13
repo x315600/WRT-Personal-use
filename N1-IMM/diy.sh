@@ -166,9 +166,9 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-alist/root/usr/share/luci/menu.d/*.json
 
 # 启用frp, luci用自带, frp第三方更新版本
-rm -rf feeds/packages/net/frp
-rm -rf feeds/luci/applications/luci-app-frps
-rm -rf feeds/luci/applications/luci-app-frpc
+#rm -rf feeds/packages/net/frp
+#rm -rf feeds/luci/applications/luci-app-frps
+#rm -rf feeds/luci/applications/luci-app-frpc
 git clone --depth=1 https://github.com/justice2001/luci-app-multi-frpc package/frpc
 #git clone https://github.com/kuoruan/openwrt-frp feeds/packages/net/frp
 #git clone --depth=1 https://github.com/superzjg/luci-app-frpc_frps package/luci-app-frpc_frps
